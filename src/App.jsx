@@ -1,14 +1,20 @@
-import { useState } from 'react';
-import Navber from './components/Navber';
+import { useState } from "react";
+import Navber from "./components/Navber";
+import Hero from "./sections/Hero";
+import Trending from "./sections/trending";
+import Footer from "./sections/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-    <Navber />
+      <Navber />
+      <Hero />
+      <Trending />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
