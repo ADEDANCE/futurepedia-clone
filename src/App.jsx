@@ -3,6 +3,7 @@ import Navber from "./components/Navber";
 import Hero from "./sections/Hero";
 import Trending from "./sections/trending";
 import Footer from "./sections/Footer";
+import For_creator from "./sections/For_creator";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,6 +13,7 @@ function App() {
       <Navber />
       <Hero />
       <Trending />
+      <For_creator />
       <Footer />
     </>
   );
