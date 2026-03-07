@@ -1,32 +1,35 @@
 import React from "react";
+import Button from "../components/Button";
 
 const Trending = () => {
+  const categories = [
+    "Marketing",
+    "Productivity",
+    "Design",
+    "Video",
+    "Research",
+    "Text-To-Image",
+    "Design Generator",
+    "Email Assistant",
+  ];
   return (
-    <section className=" py-20 bg-white">
+    <section className=" py-20 bg-blue-950">
       <div className=" max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Features</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* features card */}
-          <div className="p-6 border rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-2">Fast Performance</h3>
-            <p className="text-gray-600">
-              React apps are fast and efficient for modern web experiences.
-            </p>
-          </div>
-          {/* features card */}
-          <div className="p-6 border rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-2">Fast Performance</h3>
-            <p className="text-gray-600">
-              React apps are fast and efficient for modern web experiences.
-            </p>
-          </div>
-          {/* features card */}
-          <div className="p-6 border rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-2">Fast Performance</h3>
-            <p className="text-gray-600">
-              React apps are fast and efficient for modern web experiences.
-            </p>
-          </div>
+        <h1 className="text-white text-7xl font-bold  text-center mb-5">
+          Trending Categories
+        </h1>
+        <p className=" text-center text-white">
+          Explore our editorial favorites and popular AI tools in these trending
+          categories
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 pt-16 max-w-2xl mx-auto">
+          {categories.map((category, index) => (
+            <Button
+              className={`bg-white hover:text-blue-400 text-black text-sm `}
+            >
+              {category}
+            </Button>
+          ))}
         </div>
       </div>
     </section>
