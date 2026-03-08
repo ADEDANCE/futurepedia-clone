@@ -19,7 +19,7 @@ import { HiLightningBolt } from "react-icons/hi";
 
 const For_creator = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white mt-20">
       <div className=" max-w-7xl mx-auto px-4">
         <div className=" grid grid-cols-1 lg:grid-cols-2 items-start  lg:gap-20">
           <div className=" pl-8">
