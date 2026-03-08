@@ -8,6 +8,14 @@ import {
   FaTrademark,
 } from "react-icons/fa";
 import KevinHutsonface from "../assets/KevinHutsonface.webp";
+
+import {
+  ChatGPTImage,
+  Claude,
+  Perplexity,
+  Gemini,
+  // Grock,
+} from "../assets/index";
 import {
   RiArrowDropUpLine,
   RiCustomerService2Line,
@@ -69,7 +77,7 @@ const Popular_categories = () => {
           </div>
 
           {/* Line */}
-          <div className="relative  h-0.5 w-96 bg-gray-300 mt-3 mx-auto">
+          <div className="relative  h-0.5 w-60 md:w-96 bg-gray-300 mt-3 mx-auto">
             <div
               className={`absolute top-0 h-full  bg-blue-500 transition-all duration-300 ${
                 activeTab === "popular" ? "left-0 w-1/2 " : "left-1/2 w-1/2"
@@ -99,7 +107,7 @@ const Popular_categories = () => {
           <div className=" md:col-span-2">
             {/* card */}
             <Home_card
-              image={KevinHutsonface}
+              image={ChatGPTImage}
               title={"ChatGPT"}
               description="Research, create, and automate tasks with the leader in AI."
               stats={[
@@ -115,9 +123,25 @@ const Popular_categories = () => {
 
             {/* card */}
             <Home_card
-              image={KevinHutsonface}
-              title={"ChatGPT"}
-              description="Research, create, and automate tasks with the leader in AI."
+              image={Claude}
+              title={"Claude"}
+              description="Create, analyze, and debug content and code faster.."
+              stats={[
+                { icon: FaTag, value: 703 },
+                {
+                  icon: RiArrowDropUpLine,
+                  value: 703,
+                  color: "text-green-400",
+                },
+              ]}
+              tags={["#ai Chatbots", "#research", "#code assistant"]}
+            />
+
+            {/* card */}
+            <Home_card
+              image={Perplexity}
+              title={"Perplexity"}
+              description="Find and summarize trusted web information instantly."
               stats={[
                 { icon: FaTag, value: 6215 },
                 {
@@ -131,25 +155,9 @@ const Popular_categories = () => {
 
             {/* card */}
             <Home_card
-              image={KevinHutsonface}
-              title={"ChatGPT"}
-              description="Research, create, and automate tasks with the leader in AI."
-              stats={[
-                { icon: FaTag, value: 6215 },
-                {
-                  icon: RiArrowDropUpLine,
-                  value: 6215,
-                  color: "text-green-400",
-                },
-              ]}
-              tags={["#ai Chatbots", "#research", "#AI agents"]}
-            />
-
-            {/* card */}
-            <Home_card
-              image={KevinHutsonface}
-              title={"ChatGPT"}
-              description="Research, create, and automate tasks with the leader in AI."
+              image={Gemini}
+              title={"Google Gemini"}
+              description="Multimodal reasoning across text, images, audio, and video."
               stats={[
                 { icon: FaTag, value: 6215 },
                 {
