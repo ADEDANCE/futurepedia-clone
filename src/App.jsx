@@ -7,20 +7,16 @@ import For_creator from "./sections/For_creator";
 import Popular_categories from "./sections/popular_categories";
 import Ai_tool_category from "./sections/Ai_tool_category";
 import For_Productivity from "./sections/For_Productivity";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className=" bg-gray-200 min-h-screen">
+    <div>
       <Navber />
-      <Hero />
-      <Popular_categories />
-      <Trending />
-      <For_creator />
-      <For_Productivity />
-      <Ai_tool_category />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
