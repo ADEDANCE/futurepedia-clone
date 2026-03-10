@@ -1,40 +1,45 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.svg";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi";
+import { Link } from "react-router-dom";
 const Navber = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className=" bg-blue-700 shadow-md">
+    <nav
+      className={` fixed top-0 left-0  w-full bg-blue-700 shadow-md ${
+        isOpen ? "bg-white" : "bg-blue-700"
+      }`}
+    >
       <div className=" max-w-7xl mx-auto px-4">
         <div className=" flex justify-between items-center h-16">
           <img src={logo} alt="MyWebsite Logo" />
 
           <div className=" hidden md:flex space-x-6">
-            <a
-              href="#"
+            <Link
+              to="/tools"
               className="text-white hover:text-gray-200 hover:underline"
             >
               AI Tools
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="/news"
               className="text-white hover:text-gray-200 hover:underline"
             >
               Newsletter
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="/resources"
               className="text-white hover:text-gray-200 hover:underline"
             >
               Resources
-            </a>
+            </Link>
           </div>
           <div className=" hidden md:flex space-x-6">
-            <button className="text-white text-xl">
-              <FiSearch />
+            <button className="text-xl">
+              <FiMenu className=" text-white" />
             </button>
             <button className=" text-white hover:bg-white hover:text-black py-2 px-3 rounded-full">
               Login
@@ -47,27 +52,34 @@ const Navber = () => {
             onClick={() => setIsOpen(!isOpen)}
             className=" md:hidden text-white"
           >
-            <FiMenu className=" text-white" />
+            {isOpen ? (
+              <FiX className="text-black text-2xl" />
+            ) : (
+              <FiMenu className="text-white text-2xl" />
+            )}
           </button>
         </div>
       </div>
       {isOpen && (
-        <div className=" md:hidden px-4 pb-4 space-y-3">
-          <a href="#" className="block text-gray-700 hover:text-blue-600">
-            Home
-          </a>
+        <div className=" md:hidden px-4 pb-4 space-y-3 bg-white">
+          <Link to="/tools" className="block text-black hover:text-gray-600">
+            AI Tools
+          </Link>
 
-          <a href="#" className="block text-gray-700 hover:text-blue-600">
-            About
-          </a>
+          <Link
+            to="/resources"
+            className="block text-black hover:text-gray-600"
+          >
+            Resources
+          </Link>
 
-          <a href="#" className="block text-gray-700 hover:text-blue-600">
-            Services
-          </a>
+          <Link to="/news" className="block text-black hover:text-gray-600">
+            Newsletter
+          </Link>
 
-          <a href="#" className="block text-gray-700 hover:text-blue-600">
+          <Link to="/" className="block text-black hover:text-gray-600">
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </nav>
