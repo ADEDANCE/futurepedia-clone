@@ -39,8 +39,12 @@ const Ai_tool_category = () => {
         <p className=" my-4 text-xl">
           Futurepedia is the largest independent ecosystem for AI discovery,
           education, and professional adoption. Across Futurepedia, Skill Leap,
-          and the Howfinity YouTube network, we serve millions of professionals,
-          founders, and operators navigating the shift to AI-powered work.
+          and the Howfinity YouTube network,
+          <span className=" font-bold">
+            {" "}
+            we serve millions of professionals, founders, and operators
+            navigating the shift to AI-powered work.
+          </span>
         </p>
         <p className=" my-4 text-xl">
           We operate the world’s first AI tool directory, featuring 4,000+
